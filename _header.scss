@@ -1,0 +1,33 @@
+header {
+    width: 100%;
+    padding: $header-padding 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: $primary;
+    }
+
+    nav {
+        a {
+            margin-left: $nav-gap;
+            text-decoration: none;
+            color: $primary;
+            transition: 0.3s;
+
+            &:hover {
+                color: $accent;
+            }
+
+            // & op 3 manieren
+            &.active { font-weight: bold; }
+            &:first-child { margin-left: 0; }
+            &--special { color: yellow; }
+        }
+    }
+}

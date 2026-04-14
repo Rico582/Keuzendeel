@@ -1,0 +1,29 @@
+.hero {
+    width: 100%;
+    height: $hero-height;
+    background-image: url("OIP (4).webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .overlay {
+        @extend .hero; // extend voorbeeld
+        height: 100%;
+        background: $dark;
+    }
+
+    .content {
+        @include center;
+        text-align: center;
+        color: $primary;
+        max-width: 700px;
+
+        h2 {
+            @include responsive-text(42px);
+        }
+
+        p {
+            @include responsive-text(22px);
+        }
+    }
+}
