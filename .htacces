@@ -1,0 +1,13 @@
+# Forceer HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Mooie URL's (zonder .html)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Standaard 404 pagina
+ErrorDocument 404 /404.html
+
+//github ondersteund geen pages maar heb alsnog zoals de opdracht het gedaan.
